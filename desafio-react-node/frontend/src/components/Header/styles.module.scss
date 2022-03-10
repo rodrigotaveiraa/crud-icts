@@ -4,5 +4,8 @@
   align-items: center;
   height: 4rem;
   gap: 1rem;
-  border-bottom: 1px solid #c3c3c3;
+  border-bottom: 1px solid var(--cinza);
+  box-shadow: var(--sombra);
+  background: var(--azul);
+  color: var(--branco);
 }

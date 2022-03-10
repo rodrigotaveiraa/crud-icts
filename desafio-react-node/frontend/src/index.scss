@@ -4,9 +4,18 @@
   box-sizing: 0;
 }
 
+:root {
+  --branco: #fff;
+  --cinza: #f0f0f0;
+  --cinza-escuro: #ccc;
+  --azul: #0e0a4f;
+  --azul-desbotado: #3e497a;
+  --sombra: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
 body {
   font-family: sans-serif;
-  background: #f5f8ff;
+  background: var(--branco);
 }
 
 a {
@@ -25,4 +34,42 @@ button {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--azul-desbotado);
+}
+
+.reactModalOverlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactModalContent {
+  width: min(90vw, 500px);
+  // max-width: 500px;
+  background: white;
+  position: relative;
+  border-radius: 1rem;
+  animation: slideIn 0.3s linear;
+}
+
+@keyframes slideIn {
+  from {
+    margin-top: -2.9rem;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
 }

@@ -12,22 +12,12 @@ function VisualizarItem() {
   const [isEdit, setIsEdit] = useState(false);
   const [flagReset, setFlagReset] = useState(false);
 
-  const handleSubmit = async (values) => {
-    try {
-      await api.put(`items/${slug}`, values);
-      setIsEdit(false);
-    } catch (error) {
-      console.log(error);
-    }
+  const handleSubmit = (values) => {
+    console.log(values);
   };
 
-  const handleDelete = async () => {
-    try {
-      await api.delete(`items/${slug}`);
-      navigate("/items");
-    } catch (error) {
-      console.log(error);
-    }
+  const handleDelete = () => {
+    navigate("/items");
   };
 
   return (
@@ -37,7 +27,6 @@ function VisualizarItem() {
           useEffect(() => {
             async function fetchItemsDetails() {
               const { data } = await api.get(`items/${slug}`);
-              console.log(data);
               itemFields.forEach((field) => {
                 setFieldValue(field, data[field], false);
               });
