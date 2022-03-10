@@ -17,9 +17,8 @@
 - Modal pedidos
 
 --- 
-Frontend: yarn && yarn start
-Backend:
-- npm install && npm start
+Frontend: `yarn && yarn start`
+Backend: `npm install && npm start`
 
 ---
 ![image](https://user-images.githubusercontent.com/57207372/157745192-e647fbc3-c0ba-418e-b6b2-53af63df0d92.png)
